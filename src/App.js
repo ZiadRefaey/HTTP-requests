@@ -6,6 +6,7 @@ import "./App.css";
 
 function App() {
   const [movies, setMovies] = useState([]);
+
   function getMoviesHandler() {
     fetch("https://swapi.dev/api/films")
       .then((response) => {
@@ -23,7 +24,6 @@ function App() {
         setMovies(transformedData);
       });
   }
-
   return (
     <React.Fragment>
       <section>
